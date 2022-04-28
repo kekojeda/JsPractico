@@ -29,6 +29,17 @@ function areaTriangulo(baseTriangulo, alturaTriangulo){
 }
 
 
+function alturaTrianguloIsoseles(ladoA, ladoB, base){
+    if(ladoA == ladoB){
+        const altura = Math.sqrt( (ladoA **2 ) - ((base**2)/4) )
+        return altura
+    }else {
+        alert("No es un triangulo ISOSELES")
+    }
+
+}
+
+
 console.groupEnd();
 
 // Circulo
@@ -95,6 +106,26 @@ function calcularPerimetroTriangulo(){
     alert(area )
  }
 
+ function calcularAlturaTrianguloIsoseles(){
+
+    const input1 = document.getElementById("InputTriangulo1")
+    const value1 = input1.value;
+    const input2 = document.getElementById("InputTriangulo2")
+    const value2 = input2.value;
+    const inputBase = document.getElementById("InputTrianguloBase")
+    const valueBase = inputBase.value;
+
+    const altura = alturaTrianguloIsoseles(value1, value2, valueBase);
+    alert(altura )
+
+
+
+    
+
+}
+
+
+
 
 
  function calcularPerimetroCirculo(){
@@ -126,6 +157,9 @@ function calcularAreaCirculo(){
     alert(area);
 
 }
+
+
+
 
 
 
