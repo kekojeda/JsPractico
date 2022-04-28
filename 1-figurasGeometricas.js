@@ -42,8 +42,8 @@ function perimetroCirculo(radio){
     return radio * 2;
 } 
 
-function circunferenciaCirculo(diametroCirculo){
-    return diametroCirculo * Math.PI;
+function circunferenciaCirculo(perimetroCirculo){
+    return perimetroCirculo * Math.PI;
 } 
 
 
@@ -78,9 +78,6 @@ function calcularPerimetroTriangulo(){
     const inputBase = document.getElementById("InputTrianguloBase")
     const valueBase = inputBase.value;
 
-    
-
-
     const perimetro = perimetroTriangulo(value1, value2, valueBase);
     alert(perimetro )
  }
@@ -97,5 +94,40 @@ function calcularPerimetroTriangulo(){
     const area = areaTriangulo(valueBase, valueAltura);
     alert(area )
  }
+
+
+
+ function calcularPerimetroCirculo(){
+    const inputRadio = document.getElementById("InputCirculoRadio")
+    const value = inputRadio.value;
+
+    const perimetro = perimetroCirculo(value);
+    alert(perimetro)
+
+    
+} 
+
+function calcularCircundferenciaCirculo(){
+    const inputRadio = document.getElementById("InputCirculoRadio")
+    const value = inputRadio.value;
+    const perimetro = perimetroCirculo(value)
+
+    const circunferencia = circunferenciaCirculo(perimetro);
+    alert(circunferencia)
+
+} 
+
+
+function calcularAreaCirculo(){
+    const inputRadio = document.getElementById("InputCirculoRadio")
+    const value = inputRadio.value;
+
+    const area = areaCirculo(value);
+    alert(area);
+
+}
+
+
+
 
 
